@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>книжный магазин</title>
+</head>
+
+<main>
+<header>
+ <nav class="header">
+   <img class="logo" src="img/Bookshop.svg" alt="logo">
+   
+   <nav>
+    <ul class="header__list">
+      <li>
+      <a class="header__link" href="#">BOOKS</a>
+      </li>
+
+      <li>
+      <a class="header__link" href="#">AUDIOBOOKS</a>
+      </li>
+
+       <li>
+      <a class="header__link" href="#">STATIONERY & GIFTS</a>
+      </li>
+
+       <li>
+      <a class="header__link" href="#">BLOG</a>
+      </li>
+   </nav>  
+
+    <div class="header__icons">
+          <img class="" src="img/user.svg" alt="user icon">
+          <img class="" src="img/search.svg" alt="search icon">
+          <img class="" src="img/shop bag.svg" alt="shopbag icon">
+            <div class="basket__items" id="basketItems" style="display: none;"></div>
+    </div>
+</header>
+</main>
+
+
+<body>
+<div class="main">
+
+
+   <div class="slider">
+     <div class="slider__line">
+<img class="slider-image" src="img/banner.png" alt="foto1">
+<img class="slider-image" src="img/banner2.png" alt="foto2">
+<img class="slider-image" src="img/banner3.png" alt="foto3">
+     </div>
+   </div>
+
+
+
+     <div class="bottom">
+       <div class="dot active"></div>
+       <div class="dot"></div>
+       <div class="dot"></div>
+     </div>
+  
+
+<a class="change-old" href="#">
+<p class="text">CHANGE <br>OLD BOOK <br> ON NEW</p>
+<img class="arrow" src="img/arrow.png" alt="arrow">
+</a>
+
+<a class="top-book" href="#">
+<p class="text2">TOP<br>100<br>BOOKS<br>2022</p>
+<img class="arrow" src="img/arrow.png" alt="arrow">
+</a>
+
+</div>
+
+
+
+
+
+<div class="main2">
+     <div class="sidebar">
+       <ul>
+       {% comment %} у каждой категории добавить  id , чтобы потом искать по const query = "subject:Business" чтоб по клику сразу категорию искать; {% endcomment %}
+           <li class="category sidebar-active">Architecture</li>
+           <li class="category">Art & Fashion</li>
+           <li class="category">Biography</li>
+           <li class="category">Business</li>
+           <li class="category">Crafts & Hobbies</li>
+           <li class="category">Drama</li>
+           <li class="category">Fiction</li>
+           <li class="category">Food & Drink</li>
+           <li class="category">Health & Wellbeing</li>
+           <li class="category">History & Politics</li>
+           <li class="category">Humor</li>
+           <li class="category">Poetry</li>
+           <li class="category">Psychology</li>
+           <li class="category">Science</li>
+           <li class="category">Technology</li>
+           <li class="category">Travel & Maps</li>
+      </ul>
+     </div>
+</div>
+ {% comment %} делаем временную кнопку для проверки fetch вообще работают запросы или нет {% endcomment %}
+<button type="submit" class="btn" id="button">Показать книги</button>
+
+<div class="books"> </div>
+
+<script src="js/index.js"></script>
+</body>
+
+
+
+
+</html>
